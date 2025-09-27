@@ -18,9 +18,10 @@
         <p class="text-muted">{%now "jS F Y"%}</p>
         <div class="col-md-7 col-lg-7" style="height: 450px;overflow: scroll;">
             <!-- List of all the tasks from the day -->
+             {% for task in tasks %}
              <div class="card m-1">
                 <div class="card-body">
-                    This is sometask
+                    {{ task.task}}
                     <span style="position:relative;float:right;">
                         <buttton class="btn btn-success"><i class="fa fa-check"></i> Mark as done</buttton>
                         <button class="btn btn-danger"><i class="fa fa-trash"></i></button>
@@ -28,6 +29,7 @@
                     </span>
                 </div>
              </div>
+             {% endfor %}
         </div>
         <div class="col-md-5 col-lg-5">
             <h5>Completed Task</h5>
